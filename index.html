@@ -19,6 +19,9 @@
             background-clip: text;
             text-fill-color: transparent;
         }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
         /* Animación para la aparición de elementos */
         .fade-in-section {
             opacity: 0;
@@ -44,10 +47,10 @@
     <header class="h-screen min-h-[600px] text-white flex flex-col justify-center items-center text-center p-4 relative bg-cover bg-center" style="background-image: url('https://i.postimg.cc/d1NZ0Qfy/Escena1.png');">
         <div class="absolute inset-0 bg-black/50"></div>
         <div class="relative z-10 fade-in-section is-visible">
-            <h1 class="text-4xl md:text-6xl font-black leading-tight max-w-4xl mx-auto">El sueño de ser profesional. Su escuela es el primer obstáculo.</h1>
+            <h1 class="text-4xl md:text-6xl font-black leading-tight max-w-4xl mx-auto text-shadow">El sueño de ser profesional. Su escuela es el primer obstáculo.</h1>
             <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto">Esta es la historia de Ana. Sigue su viaje y descubre la realidad de miles de estudiantes en el Perú a través de los datos.</p>
         </div>
-        <button class="next-scene-btn absolute bottom-10 left-1/2 -translate-x-1/2 text-white p-3 rounded-full hover:bg-white/20 transition-colors">
+        <button class="next-scene-btn absolute bottom-10 left-1/2 -translate-x-1/2 text-white p-3 rounded-full hover:bg-white/20 transition-colors z-20">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
         </button>
     </header>
@@ -60,7 +63,7 @@
                 <div class="bg-white/15 backdrop-blur-sm rounded-lg p-6 md:p-12 shadow-2xl">
                     <div class="flex justify-center items-center gap-4 mb-4">
                          <svg class="w-10 h-10 text-slate-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>
-                         <h2 class="text-3xl md:text-4xl font-bold text-center text-white">1. La escuela de Ana se cae a pedazos</h2>
+                         <h2 class="text-3xl md:text-4xl font-bold text-center text-white text-shadow">1. La escuela de Ana se cae a pedazos</h2>
                     </div>
                     <p class="text-center text-md md:text-lg text-white max-w-3xl mx-auto mb-12">Cuando llueve, el agua se filtra por el techo de su aula. Las paredes tienen grietas y los baños son precarios. La escuela de Ana no es la única, es parte de un problema nacional.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -84,7 +87,7 @@
                     </div>
                 </div>
             </div>
-            <button class="next-scene-btn absolute bottom-10 left-1/2 -translate-x-1/2 text-white p-3 rounded-full hover:bg-white/20 transition-colors">
+            <button class="next-scene-btn absolute bottom-10 left-1/2 -translate-x-1/2 text-white p-3 rounded-full hover:bg-white/20 transition-colors z-20">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
             </button>
         </section>
@@ -95,11 +98,11 @@
             <div class="relative z-10 container mx-auto px-6 max-w-6xl">
                 <div class="flex justify-center items-center gap-4">
                     <svg class="w-10 h-10 text-slate-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.462 48.462 0 0012 4.5c-2.291 0-4.545.243-6.75.72A48.462 48.462 0 005.25 4.97M18.75 4.97C19.618 6.22 20.25 7.745 20.25 9.375c0 1.63-.632 3.155-1.5 4.405M5.25 4.97C4.382 6.22 3.75 7.745 3.75 9.375c0 1.63.632 3.155 1.5 4.405" /></svg>
-                    <h2 class="text-3xl md:text-4xl font-bold text-center">2. La lotería del lugar de nacimiento</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-center text-shadow">2. La lotería del lugar de nacimiento</h2>
                 </div>
                 <p class="text-center text-lg text-slate-200 max-w-3xl mx-auto mt-4 mb-12">Ana nació en una comunidad rural. Sin elegirlo, sus oportunidades ya son distintas a las de un niño de la ciudad. Esta desigualdad se puede medir.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                    <div class="bg-slate-800/80 backdrop-blur-sm p-8 rounded-lg text-center shadow-lg interactive-card">
+                    <div class="bg-slate-800/30 backdrop-blur-sm p-8 rounded-lg text-center shadow-lg interactive-card">
                         <h3 class="text-xl font-bold text-amber-300 mb-4">El riesgo de quedarse atrás es mayor</h3>
                         <div class="flex justify-around items-end">
                             <div class="w-1/2">
@@ -112,7 +115,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-slate-800/80 backdrop-blur-sm p-8 rounded-lg text-center shadow-lg interactive-card">
+                    <div class="bg-slate-800/30 backdrop-blur-sm p-8 rounded-lg text-center shadow-lg interactive-card">
                         <h3 class="text-xl font-bold text-amber-300 mb-4">Y para las niñas, es aún más difícil</h3>
                         <div class="flex justify-around items-end">
                             <div class="w-1/2">
@@ -128,28 +131,28 @@
                 </div>
                  <p class="text-xs text-slate-400 mt-8 text-center">Fuente: GRADE (2022); INEI (2023).</p>
             </div>
-            <button class="next-scene-btn absolute bottom-10 left-1/2 -translate-x-1/2 text-white p-3 rounded-full hover:bg-white/20 transition-colors">
+            <button class="next-scene-btn absolute bottom-10 left-1/2 -translate-x-1/2 text-white p-3 rounded-full hover:bg-white/20 transition-colors z-20">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
             </button>
         </section>
 
         <!-- SECCIÓN 4: EL RESULTADO FINAL -->
         <section class="fade-in-section h-screen min-h-[700px] flex flex-col justify-center relative bg-cover bg-center" style="background-image: url('https://i.postimg.cc/sXHG2fLM/Escena4-2.png');">
-            <div class="absolute inset-0 bg-white/50"></div>
+            <div class="absolute inset-0 bg-slate-800/30"></div>
              <div class="relative z-10 container mx-auto px-6 max-w-6xl">
                  <div class="bg-white/15 backdrop-blur-sm rounded-lg p-6 md:p-12 shadow-2xl">
                      <div class="flex justify-center items-center gap-4">
-                        <svg class="w-10 h-10 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" /></svg>
-                        <h2 class="text-3xl md:text-4xl font-bold text-center">3. El resultado: Un aprendizaje que no despega</h2>
+                        <svg class="w-10 h-10 text-slate-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" /></svg>
+                        <h2 class="text-3xl md:text-4xl font-bold text-center text-white text-shadow">3. El resultado: Un aprendizaje que no despega</h2>
                      </div>
-                     <p class="text-center text-lg text-slate-600 mt-4 mb-12 max-w-3xl mx-auto">Con una escuela precaria y menos oportunidades, el esfuerzo de Ana y su maestro no es suficiente. El resultado de su aprendizaje, y el de todo el país, se refleja en las pruebas internacionales.</p>
+                     <p class="text-center text-lg text-white mt-4 mb-12 max-w-3xl mx-auto">Con una escuela precaria y menos oportunidades, el esfuerzo de Ana y su maestro no es suficiente. El resultado de su aprendizaje, y el de todo el país, se refleja en las pruebas internacionales.</p>
                     <div class="h-[350px] md:h-[500px] relative">
                         <canvas id="pisaChart"></canvas>
                     </div>
-                     <p class="text-xs text-slate-400 mt-8 text-center">Fuente: MINEDU (2023).</p>
+                     <p class="text-xs text-slate-200 mt-8 text-center">Fuente: MINEDU (2023).</p>
                  </div>
             </div>
-            <button class="next-scene-btn absolute bottom-10 left-1/2 -translate-x-1/2 text-white p-3 rounded-full hover:bg-black/20 transition-colors">
+            <button class="next-scene-btn absolute bottom-10 left-1/2 -translate-x-1/2 text-white p-3 rounded-full hover:bg-black/20 transition-colors z-20">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
             </button>
         </section>
@@ -158,7 +161,7 @@
         <footer class="fade-in-section h-screen min-h-[600px] text-white flex flex-col justify-center items-center text-center p-4 relative bg-cover bg-center" style="background-image: url('https://i.postimg.cc/L47ZKXf3/Escena5.png');">
              <div class="absolute inset-0 bg-black/60"></div>
              <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black max-w-3xl mx-auto">El sueño de Ana depende de aulas seguras y oportunidades justas.</h2>
+                <h2 class="text-4xl md:text-5xl font-black max-w-3xl mx-auto text-shadow">El sueño de Ana depende de aulas seguras y oportunidades justas.</h2>
                 <p class="mt-6 text-xl">¿Dejaremos que su futuro se derrumbe junto a su escuela?</p>
              </div>
         </footer>
@@ -289,8 +292,8 @@
                     {
                         label: 'Promedio OCDE',
                         data: [472, 476, 485],
-                        backgroundColor: 'rgba(100, 116, 139, 0.5)',
-                        borderColor: 'rgba(100, 116, 139, 1)',
+                        backgroundColor: 'rgba(203, 213, 225, 0.7)',
+                        borderColor: 'rgba(203, 213, 225, 1)',
                         borderWidth: 1,
                         borderRadius: 4,
                     }]
@@ -299,16 +302,16 @@
                     scales: {
                         y: {
                             beginAtZero: true,
-                            grid: { color: '#e2e8f0' },
-                             ticks: { color: '#475569', font: { weight: 'bold' } }
+                            grid: { color: 'rgba(255, 255, 255, 0.2)' },
+                             ticks: { color: 'white', font: { weight: 'bold' } }
                         },
                         x: {
                              grid: { display: false },
-                             ticks: { color: '#475569', font: { weight: 'bold' } }
+                             ticks: { color: 'white', font: { weight: 'bold' } }
                         }
                     },
                     plugins: {
-                        legend: { position: 'bottom', labels: { color: '#475569' } },
+                        legend: { position: 'bottom', labels: { color: 'white' } },
                         tooltip: {
                             backgroundColor: '#0f172a',
                             titleFont: { size: 16 },
