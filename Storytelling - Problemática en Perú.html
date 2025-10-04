@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Historia de Ana: La Crisis Educativa en Perú</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* slate-100 */
+        }
+        .brand-gradient {
+            background: linear-gradient(90deg, #D50000, #FF6D00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        /* Animación para la aparición de elementos */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .interactive-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .interactive-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- SECCIÓN 1: EL INICIO DE LA HISTORIA -->
+    <header class="h-screen min-h-[600px] text-white flex flex-col justify-center items-center text-center p-4 relative bg-cover bg-center" style="background-image: url('https://i.postimg.cc/d1NZ0Qfy/Escena1.png');">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative z-10 fade-in-section is-visible">
+            <h1 class="text-4xl md:text-6xl font-black leading-tight max-w-4xl mx-auto">El sueño de ser profesional. Su escuela es el primer obstáculo.</h1>
+            <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto">Esta es la historia de Ana. Sigue su viaje y descubre la realidad de miles de estudiantes en el Perú a través de los datos.</p>
+        </div>
+        <button class="next-scene-btn absolute bottom-10 right-10 text-white p-3 rounded-full hover:bg-white/20 transition-colors">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </button>
+    </header>
+
+    <main class="w-full">
+        <!-- SECCIÓN 2: LA ESCUELA DE ANA -->
+        <section class="fade-in-section h-screen min-h-[700px] flex flex-col justify-center relative bg-cover bg-center" style="background-image: url('https://i.postimg.cc/76tJLPRM/Escena2.png');">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="relative z-10 container mx-auto px-6 max-w-6xl">
+                <div class="bg-white/15 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-2xl">
+                    <div class="flex justify-center items-center gap-4 mb-4">
+                         <svg class="w-10 h-10 text-slate-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" /></svg>
+                         <h2 class="text-3xl md:text-4xl font-bold text-center text-white">1. La escuela de Ana se cae a pedazos</h2>
+                    </div>
+                    <p class="text-center text-lg text-white max-w-3xl mx-auto mb-12">Cuando llueve, el agua se filtra por el techo de su aula. Las paredes tienen grietas y los baños son precarios. La escuela de Ana no es la única, es parte de un problema nacional.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                        <div class="text-center md:text-left">
+                            <p class="text-lg text-white mb-2">Para repararlas todas, se necesita una inversión de:</p>
+                            <p class="text-6xl md:text-8xl font-black brand-gradient leading-none" data-count-up="158">S/ 0</p>
+                            <p class="text-4xl md:text-5xl font-bold brand-gradient">Mil Millones</p>
+                            <p class="text-xs text-white mt-4">Fuente: ComexPerú (2024), MINEDU.</p>
+                        </div>
+                        <div class="text-center md:text-left bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+                            <div class="flex items-center gap-4">
+                                <svg class="w-16 h-16 text-red-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>
+                                <div>
+                                    <p class="text-lg text-slate-600 mb-2">Y como la suya, el...</p>
+                                    <p class="text-5xl md:text-6xl font-black text-red-600 leading-none" data-count-up="16.2">0%</p>
+                                    <p class="text-2xl md:text-3xl font-bold text-red-600">de colegios está en riesgo</p>
+                                </div>
+                            </div>
+                            <button id="openModalBtn" class="mt-4 text-sm text-red-700 font-semibold hover:underline">¿Qué significa esto?</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="next-scene-btn absolute bottom-10 right-10 text-white p-3 rounded-full hover:bg-white/20 transition-colors">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </button>
+        </section>
+
+        <!-- SECCIÓN 3: LA DESVENTAJA DE ANA -->
+        <section class="fade-in-section h-screen min-h-[700px] flex flex-col justify-center text-white relative bg-cover bg-center" style="background-image: url('https://i.postimg.cc/G2gTp3fP/Escena3.png');">
+            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="relative z-10 container mx-auto px-6 max-w-6xl">
+                <div class="flex justify-center items-center gap-4">
+                    <svg class="w-10 h-10 text-slate-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962a3.75 3.75 0 015.962 0L12 13.5M12 13.5L12 15M12 13.5L12 15m-7.5-1.5a3 3 0 013-3 3 3 0 013 3m-6 0L4.5 15M4.5 15L4.5 15M4.5 15L6 13.5m0 0L7.5 15m-1.5-1.5L6 13.5m0 0L7.5 15M3 12a9 9 0 1118 0 9 9 0 01-18 0z" /></svg>
+                    <h2 class="text-3xl md:text-4xl font-bold text-center">2. La lotería del lugar de nacimiento</h2>
+                </div>
+                <p class="text-center text-lg text-slate-200 max-w-3xl mx-auto mt-4 mb-12">Ana nació en una comunidad rural. Sin elegirlo, sus oportunidades ya son distintas a las de un niño de la ciudad. Esta desigualdad se puede medir.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    <div class="bg-slate-800/80 backdrop-blur-sm p-8 rounded-lg text-center shadow-lg interactive-card">
+                        <h3 class="text-xl font-bold text-amber-300 mb-4">El riesgo de quedarse atrás es mayor</h3>
+                        <div class="flex justify-around items-end">
+                            <div class="w-1/2">
+                                <p class="text-6xl font-black" data-count-up="24">0%</p>
+                                <p class="font-bold">de retraso escolar si eres como Ana</p>
+                            </div>
+                             <div class="w-1/2">
+                                <p class="text-4xl font-black text-slate-400" data-count-up="7.4">0%</p>
+                                <p class="font-bold text-slate-400">en una zona urbana</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800/80 backdrop-blur-sm p-8 rounded-lg text-center shadow-lg interactive-card">
+                        <h3 class="text-xl font-bold text-amber-300 mb-4">Y para las niñas, es aún más difícil</h3>
+                        <div class="flex justify-around items-end">
+                            <div class="w-1/2">
+                                <p class="text-6xl font-black" data-count-up="23.5">0%</p>
+                                <p class="font-bold">de analfabetismo femenino en su zona</p>
+                            </div>
+                             <div class="w-1/2">
+                                <p class="text-4xl font-black text-slate-400" data-count-up="4.8">&lt;5%</p>
+                                <p class="font-bold text-slate-400">en la ciudad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <p class="text-xs text-slate-400 mt-8 text-center">Fuente: GRADE (2022); INEI (2023).</p>
+            </div>
+            <button class="next-scene-btn absolute bottom-10 right-10 text-white p-3 rounded-full hover:bg-white/20 transition-colors">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </button>
+        </section>
+
+        <!-- SECCIÓN 4: EL RESULTADO FINAL -->
+        <section class="fade-in-section h-screen min-h-[700px] flex flex-col justify-center relative bg-cover bg-center" style="background-image: url('https://i.postimg.cc/sXHG2fLM/Escena4-2.png');">
+            <div class="absolute inset-0 bg-white/15"></div>
+             <div class="relative z-10 container mx-auto px-6 max-w-6xl">
+                 <div class="bg-white/30 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-2xl">
+                     <div class="flex justify-center items-center gap-4">
+                        <svg class="w-10 h-10 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0l-1.07-1.07m15.482 0l1.07 1.07m-1.07-1.07l-1.07 1.07m1.07-1.07l1.07-1.07M12 5.25a2.25 2.25 0 012.25 2.25s0 1.09-.585 1.635a2.253 2.253 0 01-1.665.585A2.25 2.25 0 0112 8.25v-3z" /></svg>
+                        <h2 class="text-3xl md:text-4xl font-bold text-center">3. El resultado: Un aprendizaje que no despega</h2>
+                     </div>
+                     <p class="text-center text-lg text-slate-600 mt-4 mb-12 max-w-3xl mx-auto">Con una escuela precaria y menos oportunidades, el esfuerzo de Ana y su maestro no es suficiente. El resultado de su aprendizaje, y el de todo el país, se refleja en las pruebas internacionales.</p>
+                    <div class="h-[400px] md:h-[500px] relative">
+                        <canvas id="pisaChart"></canvas>
+                    </div>
+                     <p class="text-xs text-slate-400 mt-8 text-center">Fuente: MINEDU (2023).</p>
+                 </div>
+            </div>
+            <button class="next-scene-btn absolute bottom-10 right-10 text-white p-3 rounded-full hover:bg-black/20 transition-colors">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </button>
+        </section>
+        
+        <!-- SECCIÓN 5: EL FUTURO DE ANA -->
+        <footer class="fade-in-section h-screen min-h-[600px] text-white flex flex-col justify-center items-center text-center p-4 relative bg-cover bg-center" style="background-image: url('https://i.postimg.cc/L47ZKXf3/Escena5.png');">
+             <div class="absolute inset-0 bg-black/60"></div>
+             <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black max-w-3xl mx-auto">El sueño de Ana depende de aulas seguras y oportunidades justas.</h2>
+                <p class="mt-6 text-xl">¿Dejaremos que su futuro se derrumbe junto a su escuela?</p>
+             </div>
+        </footer>
+    </main>
+
+    <!-- Modal -->
+    <div id="detailsModal" class="fixed inset-0 bg-black/70 flex justify-center items-center p-4 z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-lg w-full relative">
+            <button id="closeModalBtn" class="absolute top-2 right-4 text-3xl text-slate-500 hover:text-slate-800">&times;</button>
+            <h3 class="text-2xl font-bold mb-4">¿Qué es una escuela en "Riesgo de Colapso"?</h3>
+            <p class="text-slate-600">Según la clasificación del MINEDU, se refiere a locales educativos que requieren una **sustitución total y urgente**.</p>
+            <p class="text-slate-600 mt-2">Esto implica que sus estructuras principales (cimientos, muros, techos) tienen daños tan severos que representan un **peligro inminente** para la seguridad de estudiantes y docentes. No se pueden reparar con mantenimiento regular y necesitan ser demolidas y reconstruidas por completo.</p>
+        </div>
+    </div>
+
+    <!-- Botón para ir arriba -->
+    <button id="scrollTopBtn" class="hidden fixed bottom-5 right-5 bg-red-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-red-700 transition-opacity z-40">
+        <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Lógica del Modal ---
+            const modal = document.getElementById('detailsModal');
+            const openBtn = document.getElementById('openModalBtn');
+            const closeBtn = document.getElementById('closeModalBtn');
+            
+            openBtn.addEventListener('click', () => modal.classList.remove('hidden'));
+            closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+
+            // --- Lógica del botón para ir arriba ---
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollTopBtn.classList.remove('hidden');
+                } else {
+                    scrollTopBtn.classList.add('hidden');
+                }
+            });
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // --- Lógica para el botón de siguiente escena ---
+            const nextButtons = document.querySelectorAll('.next-scene-btn');
+            nextButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const currentScene = btn.closest('header, section');
+                    const nextScene = currentScene.nextElementSibling;
+                    if (nextScene) {
+                        nextScene.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // --- Animación de aparición de secciones al hacer scroll ---
+            const sections = document.querySelectorAll('.fade-in-section');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // --- Animación de contadores ---
+            const counters = document.querySelectorAll('[data-count-up]');
+            const countUpObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const target = parseFloat(el.dataset.countUp);
+                        let current = 0;
+                        const isInt = Number.isInteger(target);
+                        const increment = isInt ? Math.max(1, Math.floor(target / 100)) : target / 100;
+                        
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(timer);
+                            }
+                            let text = isInt ? Math.floor(current) : current.toFixed(1);
+                            if (el.textContent.includes('S/')) {
+                                el.textContent = 'S/ ' + text;
+                            } else if(el.textContent.includes('%')) {
+                                el.textContent = text + '%';
+                            } else {
+                                el.textContent = text;
+                            }
+                        }, 20);
+                        observer.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.5 });
+            counters.forEach(counter => {
+                countUpObserver.observe(counter);
+            });
+
+            // --- Gráfico de PISA ---
+            const ctx = document.getElementById('pisaChart').getContext('2d');
+            const pisaChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Matemáticas', 'Lectura', 'Ciencia'],
+                    datasets: [{
+                        label: 'Puntaje Perú PISA 2022',
+                        data: [391, 408, 408],
+                        backgroundColor: 'rgba(213, 0, 0, 0.7)',
+                        borderColor: 'rgba(213, 0, 0, 1)',
+                        borderWidth: 1,
+                        borderRadius: 4,
+                    },
+                    {
+                        label: 'Promedio OCDE',
+                        data: [472, 476, 485],
+                        backgroundColor: 'rgba(100, 116, 139, 0.5)',
+                        borderColor: 'rgba(100, 116, 139, 1)',
+                        borderWidth: 1,
+                        borderRadius: 4,
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: '#e2e8f0' },
+                             ticks: { color: '#475569', font: { weight: 'bold' } }
+                        },
+                        x: {
+                             grid: { display: false },
+                             ticks: { color: '#475569', font: { weight: 'bold' } }
+                        }
+                    },
+                    plugins: {
+                        legend: { position: 'bottom', labels: { color: '#475569' } },
+                        tooltip: {
+                            backgroundColor: '#0f172a',
+                            titleFont: { size: 16 },
+                            bodyFont: { size: 14 },
+                            padding: 12,
+                            cornerRadius: 4,
+                        }
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        });
+    </script>
+</body>
+</html>
