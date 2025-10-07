@@ -137,7 +137,7 @@
         </section>
 
         <!-- SECCIÓN 4: EL RESULTADO FINAL -->
-        <section class="fade-in-section h-screen min-h-[700px] flex flex-col justify-center relative bg-cover bg-center" style="background-image: url('https://i.postimg.cc/sXHG2fLM/Escena4-2.png');">
+        <section id="chart-section" class="fade-in-section h-screen min-h-[700px] flex flex-col justify-center relative bg-cover bg-center" style="background-image: url('https://i.postimg.cc/sXHG2fLM/Escena4-2.png');">
             <div class="absolute inset-0 bg-slate-800/30"></div>
              <div class="relative z-10 container mx-auto px-6 max-w-6xl">
                  <div class="bg-white/15 backdrop-blur-sm rounded-lg p-6 md:p-12 shadow-2xl">
@@ -227,12 +227,18 @@
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.1
+                threshold: 0.2
             };
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
+                        
+                        // Si la sección del gráfico es visible, crear el gráfico
+                        if (entry.target.id === 'chart-section') {
+                            createPisaChart();
+                        }
+
                         observer.unobserve(entry.target);
                     }
                 });
@@ -275,55 +281,61 @@
                 countUpObserver.observe(counter);
             });
 
-            // --- Gráfico de PISA ---
-            const ctx = document.getElementById('pisaChart').getContext('2d');
-            const pisaChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Matemáticas', 'Lectura', 'Ciencia'],
-                    datasets: [{
-                        label: 'Puntaje Perú PISA 2022',
-                        data: [391, 408, 408],
-                        backgroundColor: 'rgba(213, 0, 0, 0.7)',
-                        borderColor: 'rgba(213, 0, 0, 1)',
-                        borderWidth: 1,
-                        borderRadius: 4,
-                    },
-                    {
-                        label: 'Promedio OCDE',
-                        data: [472, 476, 485],
-                        backgroundColor: 'rgba(203, 213, 225, 0.7)',
-                        borderColor: 'rgba(203, 213, 225, 1)',
-                        borderWidth: 1,
-                        borderRadius: 4,
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            grid: { color: 'rgba(255, 255, 255, 0.2)' },
-                             ticks: { color: 'white', font: { weight: 'bold' } }
+            // --- Función para crear el Gráfico de PISA ---
+            function createPisaChart() {
+                const ctx = document.getElementById('pisaChart').getContext('2d');
+                const pisaChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Matemáticas', 'Lectura', 'Ciencia'],
+                        datasets: [{
+                            label: 'Puntaje Perú PISA 2022',
+                            data: [391, 408, 408],
+                            backgroundColor: 'rgba(213, 0, 0, 0.7)',
+                            borderColor: 'rgba(213, 0, 0, 1)',
+                            borderWidth: 1,
+                            borderRadius: 4,
                         },
-                        x: {
-                             grid: { display: false },
-                             ticks: { color: 'white', font: { weight: 'bold' } }
-                        }
+                        {
+                            label: 'Promedio OCDE',
+                            data: [472, 476, 485],
+                            backgroundColor: 'rgba(203, 213, 225, 0.7)',
+                            borderColor: 'rgba(203, 213, 225, 1)',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                        }]
                     },
-                    plugins: {
-                        legend: { position: 'bottom', labels: { color: 'white' } },
-                        tooltip: {
-                            backgroundColor: '#0f172a',
-                            titleFont: { size: 16 },
-                            bodyFont: { size: 14 },
-                            padding: 12,
-                            cornerRadius: 4,
-                        }
-                    },
-                    responsive: true,
-                    maintainAspectRatio: false
-                }
-            });
+                    options: {
+                        animation: {
+                            duration: 1500,
+                            easing: 'easeOutBounce'
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                grid: { color: 'rgba(255, 255, 255, 0.2)' },
+                                 ticks: { color: 'white', font: { weight: 'bold' } }
+                            },
+                            x: {
+                                 grid: { display: false },
+                                 ticks: { color: 'white', font: { weight: 'bold' } }
+                            }
+                        },
+                        plugins: {
+                            legend: { position: 'bottom', labels: { color: 'white' } },
+                            tooltip: {
+                                backgroundColor: '#0f172a',
+                                titleFont: { size: 16 },
+                                bodyFont: { size: 14 },
+                                padding: 12,
+                                cornerRadius: 4,
+                            }
+                        },
+                        responsive: true,
+                        maintainAspectRatio: false
+                    }
+                });
+            }
         });
     </script>
 </body>
